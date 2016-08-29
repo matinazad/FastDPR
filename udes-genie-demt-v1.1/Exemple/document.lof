@@ -1,0 +1,15 @@
+\select@language {english}
+\select@language {francais}
+\select@language {francais}
+\select@language {francais}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Block diagram of the Codec based on stacked autoencoders \relax }}{6}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces SNR different number of centroids for network \{1024, 512, 256 \} \relax }}{8}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A sample Input and output of the network\{512, 1024,256 \} and 20 centroids \relax }}{9}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces SNR different number of centroids for network \{512, 1024,256 \} \relax }}{10}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

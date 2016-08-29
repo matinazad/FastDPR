@@ -1,0 +1,104 @@
+\chapter{CONCLUSION}
+
+\section{Introduction}
+There are different audio coding techniques that each of them performs its best for a
+limited set of input signal (e.g. speech or audio) and a certain bit rate range.
+Providing a comprehensive survey of audio codecs is not in the horizon of this text.
+
+\section{Classification of Audio Codecs}
+There are different classifications of audio codec. Forming a new paradigm for audio coding
+is the promise of this document, the classification by coding techniques is provided here.
+This classification is based on (
+
+\subsection{Parametric Coders}
+This codec is designed to provide intelligibility in very low bit rates. Parametric codec assumes a model for production of audio signal. Encoder extract the parameters of model
+and decoder produce the signal by substituting the received parameters in the same model.
+According to the assumptions about signal production, this codec performs well only for
+a specific class of signals, e.g. speech signals.
+
+\subsection{Waveform Coders}
+These algorithms try to minimize the distance between input and output signals, so higher
+bit rate is required.
+
+\section{Hybrid coders}
+These codecs advantage from both parametric codecs by taking a speech production model
+into account, and enhance the quality by using richer models for excitations. Codebook
+
+excitation is one of these methods which has been used in CELP codec.
+The majority of modern codecs belong to hybrid compression systems.
+
+\section{Main Techniques in Audio Codecs}
+
+\subsection{Linear Prediction}
+Linear Prediction Coding (LPC), was first proposed in \cite{} in 1971 for speech coding.
+LPC is linear mathematical model of human vocal tract. \cite{} Generally it is formulated by
+an all-pole filter. LPC filter extract spectral envelope of the speech. It assumes the input
+signal (audio or speech in this case) are generated according to an autoregressive model.
+Based on framing effect (setting samples values outside of the frame used for correlation
+calculation to zero) this method add some inaccuracy to estimation even for autoregressive
+model of the same order.
+LPC finds the mean square error answer to the following equation.
+
+\begin{equation}
+P=
+\begin{bmatrix} p_{11} & p_{12} & \cdots & p_{1r} \\
+p_{21} & p_{22} & \cdots & p_{2r} \\
+\vdots & \vdots & \ddots & \vdots \\
+p_{r1} & p_{r2} & \cdots & p_{rr}
+\end{bmatrix}
+\end{equation}
+
+$p + 1$ in formulas above indicates the order of the filter.
+This problem can be solved for a using Levinson-Durbin algorithm in quadratic
+ time.
+ 
+\section{Perceptual Masking}
+It has been known for a long time that mean square error (MSE) does not resemble perceptual
+similarities. The nonequivalence roots on a phenomena called "masking". Masking,
+models situations in which one sound overshadowed the other in human ear. It happens
+based on limited temporal and spectral resolution of auditory system. Masking happens
+when two similar signals (in spectral and/or temporal domain) present and the weaker
+one turns inaudible. Based on similarity of signals in temporal or spectral domain, the
+masking may be called temporal masking or spectral masking respectively.
+There is a large number of studies in modeling and simulating and implementation of masking
+and almost all codecs benefits from these results by dedicating less bits to inaudible
+component of signal. This is known as perceptual bit-budgeting. \cite{} In \cite{}, perceptual
+distance between two signals has been defined as Euclidean distance between the linear
+mappings of the signals. This process also can be seen as applying the kernel method
+where the kernel is 3-dimensional time-frequency curve described in \cite{}, an estimation of
+this filter is shown in 2.1. This scheme of perceptual masking is very useful in perceptual
+coding and transform coding.
+
+\section{Human Auditory Model}
+More complex mathematical encoding-decoding scheme let us have higher quality in lower
+bit rate. The other important aspect of a "good" codec depends on how does it model the
+human auditory system and incorporate this modeling in design of a better codec.
+Studying and modeling of auditory system is quit old topic and almost all systems benefit
+from the results of these studies to some extends 2.4.5. The physiologic and biological
+analysis of human auditory system is outside of the scope of this work. For the sake of
+pragmatic reasons, only contemporary mathematical models which are applicable in the
+codec design process, modeling different stages of the auditory will be presented.
+These steps have been studied and their mathematical model were included in various
+existing audio systems.
+The early stages of the model consists of cochlear filtering, hair cell transduction, the
+phenomenon of lateral inhibition in the auditory neural pathway and midbrain integration. Mathematical models for auditory cortex have been relatively developed recently \cite{}.
+Cochlea is modeled as a filter bank of constant-Q bandpass filters hcoch(t; f). As figure
+2.3 indicates, the output of the cochlea filter bank will passed trough a model of auditory
+nerve pattern. Inner hair cell itself is modeled by a three-step process, first, high-pass filter
+tycoch(t; f) then the nonlinearity ghc(:) (compression) and at the end a low-pass leakage
+filter hc(t). Cochlear-nucleus neurons are modeled as derivative with respect to frequency
+fyAN(t; f) followed by a rectifier max(tycoch(t; f); 0). The last step of the first section of
+the model is a short-term integrator midbrain(t; f ) with time constant  , that models the
+further loss of phase-locking observed in the midbrain. \cite{}
+The second part of the model which is also one of the focus point of this project is the
+model of auditory cortex have been developed and improved vastly in recent years by
+conducting experiments on humans and more on animals \cite{}. Basically the current model
+of assumes that audio (output of the early auditory stage) based on specific properties
+makes special regions of the auditory cortex fire the most. These spatial varying firing rate
+leads to Spectro Temporal Response Filters or STRFs. STRFs have been modeled
+as a redundant two to three or four dimensional mappings (based on the notation and
+not much difference on implication). The first models are three dimensional wavelet like
+filters which analyses the spectrogram of the input (audio) signal to three components
+called rate (temporal modulation), scale (frequency modulation) and direction (the signal
+is upward in tone or downward). Further studies try to make this model more accurate by
+adding extra boundaries our condition to it \cite{}.

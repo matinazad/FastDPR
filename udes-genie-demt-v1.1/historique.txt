@@ -1,0 +1,18 @@
+Historique des versions de udes-genie-demt
+
+Version 1.1 (publication 2010-05-18, protocole version 2010-05-18)
+    - Nombreuses modifications au style bibliographique.
+    - Caractères accentués dans les fichiers (cls et bst) indépendants de l'encodage 
+      (merci à Yann Lemonnier pour l'idée)
+    - Les options "sort" et "sort&compress" de natbib sont maintenant fonctionnelles.
+    - Dans la liste des références, les URL peuvent maintenant être coupés sur plusieurs lignes,
+      lorsque nécessaire. Ceci est réalisé avec l'aide du package url.
+
+Version 1.01 (publication 2009-09-08, protocole 2009-07-31)
+    - Le titre français et le titre anglais du document sont maintenant
+      un paragraphe et non plus dans un environnement tabular. Cela causait
+      des résultats inattendus.
+
+Version 1.0 (publication: 2009-07-31, protocole 2009-07-31)
+    - Première version distribuée.
+

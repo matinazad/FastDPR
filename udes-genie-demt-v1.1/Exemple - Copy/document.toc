@@ -1,0 +1,30 @@
+\select@language {english}
+\select@language {francais}
+\select@language {francais}
+\select@language {francais}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
+\contentsline {chapter}{\numberline {2}CONCEPTION}{3}
+\contentsline {section}{\numberline {2.1}Introduction}{3}
+\contentsline {section}{\numberline {2.2}Classification of Audio Codecs}{3}
+\contentsline {subsection}{\numberline {2.2.1}Parametric Coders}{3}
+\contentsline {subsection}{\numberline {2.2.2}Waveform Coders}{3}
+\contentsline {section}{\numberline {2.3}Hybrid coders}{3}
+\contentsline {section}{\numberline {2.4}Main Techniques in Audio Codecs}{4}
+\contentsline {subsection}{\numberline {2.4.1}Linear Prediction}{4}
+\contentsline {subsection}{\numberline {2.4.2}Noise shaping}{5}
+\contentsline {subsection}{\numberline {2.4.3}Dither}{5}
+\contentsline {subsection}{\numberline {2.4.4}Quantization}{5}
+\contentsline {subsection}{\numberline {2.4.5}Perceptual Masking}{5}
+\contentsline {section}{\numberline {2.5}Human Auditory Model}{6}
+\contentsline {chapter}{\numberline {3}R\'EALISATION}{9}
+\contentsline {section}{\numberline {3.1}Introduction}{9}
+\contentsline {section}{\numberline {3.2}Introduction and Background}{9}
+\contentsline {section}{\numberline {3.3}Experiments}{10}
+\contentsline {section}{\numberline {3.4}Results}{11}
+\contentsline {section}{\numberline {3.5}Discussion}{15}
+\contentsline {section}{\numberline {3.6}Future works}{15}
+\contentsline {chapter}{\numberline {4}TESTS}{19}
+\contentsline {chapter}{\numberline {5}ANALYSE}{21}
+\contentsline {chapter}{\numberline {6}CONCLUSION}{23}
+\contentsline {chapter}{\numberline {A}DONN\'EES}{25}
+\contentsline {chapter}{LISTE DES R\'EF\'ERENCES}{GF1}
